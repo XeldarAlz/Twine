@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:twine/features/auth/presentation/screens/otp_verification_screen.dart';
 import 'package:twine/features/auth/presentation/screens/phone_input_screen.dart';
 import 'package:twine/features/auth/presentation/screens/profile_setup_screen.dart';
+import 'package:twine/features/dashboard/presentation/screens/dashboard_screen.dart';
 import 'package:twine/features/onboarding/presentation/screens/onboarding_screen.dart';
 
 import 'app_providers.dart';
@@ -89,8 +90,7 @@ final routerProvider = Provider<GoRouter>((ref) {
           StatefulShellBranch(routes: [
             GoRoute(
               path: '/home',
-              builder: (_, _) =>
-                  const _PlaceholderScreen(title: 'Dashboard'),
+              builder: (_, _) => const DashboardScreen(),
             ),
           ]),
           StatefulShellBranch(routes: [
